@@ -29,6 +29,7 @@ The **Book Manager API** is a RESTful API that allows users to manage a collecti
 ### Key Features
 
 - **Get All Books**: Retrieve a list of all books in the collection.
+- **Get Book Details**: Retrieve detailed information about a specific book using its unique ID.
 - **Create a New Book**: Add new books with details such as title, author, and genre.
 - **Update Existing Books**: Modify the details of existing books using their unique IDs.
 - **Delete Books**: Remove books from the collection by their ID.
@@ -53,11 +54,11 @@ Any attempt to use a genre outside of these options will result in a validation 
 - **Mongoose**: An ODM (Object Data Modeling) library for MongoDB and Node.js.
 - **Postman**: A powerful API development tool that simplifies the process of testing, documenting, and managing APIs.
 
-## Setup Instructions.
+## Setup Instructions
 
 ### Clone the repository:
 
-`git clone <repository-url>`
+`git clone https://github.com/okekejessica/Book-Manager`
 
 ### Install dependencies:
 
@@ -65,6 +66,10 @@ Any attempt to use a genre outside of these options will result in a validation 
 - `npm install`
 
 ### Set Up Environment Variables
+
+- Install the dotenv package load environment variables
+
+    `npm install dotenv`
 
 - Create a .env file in the root directory of the project. This file will store your environment variables, such as database connection strings.
   Example variable to include:
@@ -75,7 +80,7 @@ MONGO_URI=<your_mongodb_uri>
 
 - Install MongoDB if not already installed or use MongoDB Atlas
 - Create a MongoDB database named `Book-Manager`(or whatever name you specified in your .env file). and obtain the connection URI.
-- Update the `config.js` file in the backend with your MongoDB URI.
+- Update the .env file in the root of your project with your MongoDB URI.
 
 ### Run the backend server:
 
@@ -174,11 +179,11 @@ If the required fields (`title`, `author`, `genre`) are missing in the request b
 
 The Book Manager API is deployed on [Render]. You can access the live API at the following link:
 
-- **Live API**: []
+- **Live API**: [https://book-manager-dr4o.onrender.com/api/books]
 
 ## Conclusion
 
-This README provides a comprehensive guide to using the Book Manager API. For further assistance or to contribute, please refer to the project's documentation or contact the maintainers.
+This README provides a comprehensive guide to using the Book Manager API. 
 
-**GitHub Repository**: Your GitHub Repository
-**Deployed API**: Live API Link
+**GitHub Repository**: https://github.com/okekejessica/Book-Manager
+**Deployed API**: https://book-manager-dr4o.onrender.com/api/books
